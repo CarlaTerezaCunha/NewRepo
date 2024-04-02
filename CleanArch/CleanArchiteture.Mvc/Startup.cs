@@ -13,6 +13,7 @@ using CleanArchiteture.Mvc.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using CleanArchiteture.Infra.Data.Context;
+using CleanArchiteture.Infra.IoC;
 
 namespace CleanArchiteture.Mvc
 {
@@ -44,6 +45,7 @@ namespace CleanArchiteture.Mvc
             {
                 options.UseSqlServer(Configuration.GetConnectionString("UniversityDBConnection"));
             });
+            RegisterServices(services);
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -74,6 +76,10 @@ namespace CleanArchiteture.Mvc
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+        private static void RegisterServices(IServiceCollection services)
+        {
+            DependencyContainer.RegisterServices(services);
         }
     }
 }
