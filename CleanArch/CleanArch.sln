@@ -16,6 +16,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchiteture.Mvc", "CleanArchiteture.Mvc\CleanArchiteture.Mvc.csproj", "{90CFE931-0686-4684-B12E-8D65EF323847}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchiteture.Domain", "CleanArchiteture.Domain\CleanArchiteture.Domain.csproj", "{2ED1B9AC-BCD6-4BA2-A44F-DF7D041B9BD7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FEC16FAB-5E57-4356-9BEA-C58D6BD9C1B4} = {FEC16FAB-5E57-4356-9BEA-C58D6BD9C1B4}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchiteture.Infra.Data", "CleanArchiteture.Infra.Data\CleanArchiteture.Infra.Data.csproj", "{FEC16FAB-5E57-4356-9BEA-C58D6BD9C1B4}"
 EndProject

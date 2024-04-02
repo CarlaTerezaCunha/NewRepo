@@ -1,0 +1,23 @@
+﻿using CleanArchiteture.Domain.Interfaces;
+using CleanArchiteture.Domain.Models;
+using CleanArchiteture.Infra.Data.Context;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CleanArchiteture.Infra.Data.Repository
+{
+    public class CourseRepository : ICourseRepository
+    {
+        private UniversityDBContext _ctx;
+
+        public CourseRepository(UniversityDBContext ctx)
+        {
+            ctx = _ctx;
+        }
+        public IEnumerable<Course> GetCourses()
+        {
+            return _ctx.Courses;
+        }
+    }
+}
