@@ -13,7 +13,7 @@ namespace CleanArchiteture.Infra.Data.Repository
 
         public CourseRepository(UniversityDBContext ctx)
         {
-            ctx = _ctx;
+            _ctx = ctx;
         }
         public IEnumerable<Course> GetCourses()
         {

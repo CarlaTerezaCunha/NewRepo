@@ -12,7 +12,7 @@ namespace CleanArchiteture.Application.Services
         private ICourseRepository _courseRepository;
         public CourseService(ICourseRepository courseRepository)
         {
-            courseRepository = _courseRepository;
+            _courseRepository = courseRepository;
         }
 
         public CourseViewModel GetCourses()
